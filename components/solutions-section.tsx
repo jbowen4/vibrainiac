@@ -1,11 +1,5 @@
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   ArrowRight,
   Users,
@@ -15,7 +9,6 @@ import {
   Target,
   TestTube,
 } from 'lucide-react';
-import solutionsImage from '@/assets/solutions-staffing.jpg';
 
 const SolutionsSection = () => {
   return (
@@ -154,8 +147,8 @@ const SolutionsSection = () => {
           </h3>
           <p className='text-muted-foreground mb-8 max-w-2xl mx-auto'>
             Whether you need immediate support or want to build a long-term
-            partnership, we're here to help you find the perfect talent for your
-            projects.
+            partnership, we&#39;re here to help you find the perfect talent for
+            your projects.
           </p>
           <Button
             size='lg'

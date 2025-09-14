@@ -1,18 +1,5 @@
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  ArrowRight,
-  Users,
-  Gamepad2,
-  Settings,
-  Code,
-  TestTube,
-  Target,
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 // Contact Section Component
 export function ContactSection() {
