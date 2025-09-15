@@ -24,12 +24,14 @@ const HeroSection = () => {
             />
           </div>
 
-          <Badge
-            variant='outline'
-            className='text-foreground border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium'>
-            <Brain className='w-4 h-4 mr-2 text-accent' />
-            Trusted by Gaming Studios & Fortune 500 Companies
-          </Badge>
+          <div className='flex justify-center'>
+            <Badge
+              variant='outline'
+              className='text-foreground border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium max-w-full sm:max-w-fit break-words whitespace-normal'>
+              <Brain className='w-4 h-4 mr-2 text-accent' />
+              Trusted by Gaming Studios & Fortune 500 Companies
+            </Badge>
+          </div>
 
           {/* Main Headline */}
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground text-balance leading-tight'>
@@ -63,21 +65,21 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className='flex justify-center pt-4 gap-8'>
-            <Link href='#contact'>
+          <div className='flex flex-col sm:flex-row justify-center pt-4 gap-4 sm:gap-8 w-full max-w-2xl mx-auto'>
+            <Link href='#contact' className='flex justify-center'>
               <Button
                 size='lg'
-                className='bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-6 font-semibold cursor-pointer'>
+                className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px]'>
                 Fractional Leader Request
-                <Puzzle className='h-10 w-10' />
+                <Puzzle className='h-8 w-8 ml-2' />
               </Button>
             </Link>
-            <Link href='#contact'>
+            <Link href='#contact' className='flex justify-center'>
               <Button
                 size='lg'
-                className='bg-foreground hover:bg-foreground/90 text-accent-foreground px-12 py-6 font-semibold cursor-pointer'>
+                className='bg-foreground hover:bg-foreground/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[180px]'>
                 Gamify your idea
-                <Gamepad className='h-10 w-10' />
+                <Gamepad className='h-8 w-8' />
               </Button>
             </Link>
           </div>
