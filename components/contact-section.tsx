@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Divide } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -23,7 +23,7 @@ const ContactSection = () => {
           </h2>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-12'>
+        <div className='grid lg:grid-cols-1 gap-12'>
           {/* Contact Form */}
           <Card className='shadow-card border-border/50 bg-background/80 backdrop-blur-sm'>
             <CardHeader>
@@ -133,41 +133,16 @@ const ContactSection = () => {
               </Button>
             </CardContent>
           </Card>
-
-          {/* Contact Info */}
-          <div className='space-y-8'>
-            {/* Quick Contact */}
-            <Card className='shadow-card border-border/50 bg-background/80 backdrop-blur-sm'>
-              <CardHeader>
-                <CardTitle className='text-xl text-foreground'>
-                  Quick Contact
-                </CardTitle>
-              </CardHeader>
-              <CardContent className='space-y-4'>
-                <div className='flex items-center space-x-3'>
-                  <Mail className='h-5 w-5 text-primary' />
-                  <span className='text-foreground'>hello@staffpro.com</span>
-                </div>
-                <div className='flex items-center space-x-3'>
-                  <Phone className='h-5 w-5 text-primary' />
-                  <span className='text-foreground'>+1 (555) 123-4567</span>
-                </div>
-                <div className='flex items-center space-x-3'>
-                  <MapPin className='h-5 w-5 text-primary' />
-                  <span className='text-foreground'>San Francisco, CA</span>
-                </div>
-              </CardContent>
-            </Card>
-
+          <div>
             {/* Trust Indicators */}
             <Card className='shadow-card border-border/50 bg-background/80 backdrop-blur-sm'>
               <CardHeader>
-                <CardTitle className='text-xl text-foreground'>
+                <CardTitle className='text-xl text-foreground mx-auto'>
                   Trusted by Industry Leaders
                 </CardTitle>
               </CardHeader>
               <CardContent className='px-6 pb-6'>
-                <p className='text-muted-foreground mb-8 max-w-2xl mx-auto'>
+                <p className='text-muted-foreground mb-8 max-w-2xl mx-auto text-center'>
                   Trusted leaders who have worked with industry leading
                   companies and consulted with Fortune 500 clients
                 </p>

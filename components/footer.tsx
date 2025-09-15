@@ -1,5 +1,6 @@
 import { Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -42,27 +43,24 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className='font-semibold text-foreground mb-4'>Services</h3>
+            <h3 className='font-semibold text-foreground mb-4'>Site Map</h3>
             <ul className='space-y-2 text-sm text-muted-foreground'>
               <li>
-                <a href='#' className='hover:text-accent transition-colors'>
-                  Fractional COO
-                </a>
+                <Link href='/#solutions'>
+                  <p className='hover:text-accent transition-colors'>
+                    Solutions
+                  </p>
+                </Link>
               </li>
               <li>
-                <a href='#' className='hover:text-accent transition-colors'>
-                  Project Management
-                </a>
+                <Link href='/'>
+                  <p className='hover:text-accent transition-colors'>About</p>
+                </Link>
               </li>
               <li>
-                <a href='#' className='hover:text-accent transition-colors'>
-                  Game Development
-                </a>
-              </li>
-              <li>
-                <a href='#' className='hover:text-accent transition-colors'>
-                  Operations Support
-                </a>
+                <Link href='/#contact'>
+                  <p className='hover:text-accent transition-colors'>Contact</p>
+                </Link>
               </li>
             </ul>
           </div>
