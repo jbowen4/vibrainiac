@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Brain } from 'lucide-react';
+import { Brain, Gamepad, Puzzle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
@@ -37,26 +38,52 @@ const HeroSection = () => {
           </h1>
 
           <p className='text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty leading-relaxed'>
-            From fractional COOs to full-stack game development teams, we
-            deliver the specialized talent that transforms your projects from
-            concept to reality.
+            Expert leaders at a fraction of the cost that adapt to your unique
+            challenges with precision-matched talent that accelerate your
+            project delivery and operational excellence.
           </p>
 
-          <div className='flex justify-center pt-4'>
-            <Button
-              size='lg'
-              className='bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-4 text-xl font-semibold cursor-pointer'>
-              Start your project
-              <ArrowRight className='ml-2 h-6 w-6' />
-            </Button>
+          {/* Stats */}
+          <div className='flex flex-wrap justify-center gap-8 mb-12'>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-primary'>500+</div>
+              <div className='text-sm text-muted-foreground'>
+                Projects Delivered
+              </div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-primary'>98%</div>
+              <div className='text-sm text-muted-foreground'>
+                Client Satisfaction
+              </div>
+            </div>
+            <div className='text-center'>
+              <div className='text-3xl font-bold text-primary'>24h</div>
+              <div className='text-sm text-muted-foreground'>Response Time</div>
+            </div>
+          </div>
+
+          <div className='flex justify-center pt-4 gap-8'>
+            <Link href='#contact'>
+              <Button
+                size='lg'
+                className='bg-accent hover:bg-accent/90 text-accent-foreground px-12 py-6 font-semibold cursor-pointer'>
+                Fractional Leader Request
+                <Puzzle className='h-10 w-10' />
+              </Button>
+            </Link>
+            <Link href='#contact'>
+              <Button
+                size='lg'
+                className='bg-foreground hover:bg-foreground/90 text-accent-foreground px-12 py-6 font-semibold cursor-pointer'>
+                Gamify your idea
+                <Gamepad className='h-10 w-10' />
+              </Button>
+            </Link>
           </div>
 
           {/* Trust Indicators */}
           <div className='pt-12 flex flex-wrap justify-center items-center gap-8 text-muted-foreground'>
-            <div className='flex items-center gap-2'>
-              <div className='w-2 h-2 bg-accent rounded-full' />
-              <span className='text-sm font-medium'>US & Offshore Teams</span>
-            </div>
             <div className='flex items-center gap-2'>
               <div className='w-2 h-2 bg-accent rounded-full' />
               <span className='text-sm font-medium'>

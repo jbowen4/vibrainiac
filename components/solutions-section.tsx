@@ -146,9 +146,8 @@ const SolutionsSection = () => {
             Ready to Scale Your Vision?
           </h3>
           <p className='text-muted-foreground mb-8 max-w-2xl mx-auto'>
-            Whether you need immediate support or want to build a long-term
-            partnership, we&#39;re here to help you find the perfect talent for
-            your projects.
+            Ready to scale your team with elite talent? Let&#39;s discuss how we
+            can accelerate your project delivery and operational excellence.
           </p>
           <Button
             size='lg'

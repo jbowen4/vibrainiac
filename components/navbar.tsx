@@ -13,7 +13,6 @@ export function Navbar({ orientation = 'horizontal' }: NavbarProps) {
 
   const navItems = [
     { name: 'Solutions', href: '/#solutions' },
-    { name: 'Game Development', href: '/#game-dev' },
     { name: 'About', href: '/#about' },
     { name: 'Contact', href: '/#contact' },
   ];

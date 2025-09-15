@@ -73,8 +73,6 @@ export function Footer() {
             <ul className='space-y-2 text-sm text-muted-foreground'>
               <li>info@vibrainiac.com</li>
               <li>(407) 603-6527</li>
-              <li>US & Offshore</li>
-              <li>24/7 Support</li>
             </ul>
           </div>
         </div>

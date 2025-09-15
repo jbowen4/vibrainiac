@@ -1,12 +1,13 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
+/* Updated dark variant configuration for Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Updated color tokens to match VIBRAINIAC logo blue color scheme and include Black Panther theme with purple accents */
+  /* Light theme colors */
   --background: oklch(1 0 0); /* Pure white */
-  --foreground: oklch(0.3204 0.0942 253.04); /* Deep gray #04060e */
+  --foreground: oklch(0.205 0 0); /* Deep gray #1f2937 */
   --card: oklch(0.97 0 0); /* Light gray #f1f5f9 */
   --card-foreground: oklch(0.205 0 0); /* Deep gray */
   --popover: oklch(1 0 0); /* White */
@@ -17,7 +18,7 @@
   --secondary-foreground: oklch(1 0 0); /* White text on secondary */
   --muted: oklch(0.97 0 0); /* Light gray */
   --muted-foreground: oklch(0.556 0 0); /* Mid-tone gray */
-  --accent: oklch(0.65 0.25 240); /* VIBRAINIAC blue #3b82f6 */
+  --accent: oklch(0.65 0.25 240); /* VIBRAINIAC blue */
   --accent-foreground: oklch(1 0 0); /* White text on accent */
   --wakanda: oklch(0.45 0.2 300); /* Black Panther purple accent */
   --wakanda-foreground: oklch(1 0 0); /* White text on wakanda */
@@ -42,9 +43,9 @@
   --sidebar-ring: oklch(0.65 0.25 240 / 0.5);
 }
 
+/* Dark theme colors that will be applied when .dark class is present */
 .dark {
-  /* Enhanced dark mode with Black Panther theme elements */
-  --background: oklch(0.08 0 0); /* Darker background for Black Panther feel */
+  --background: oklch(0.08 0 0); /* Dark background for Black Panther feel */
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.12 0 0); /* Slightly lighter dark cards */
   --card-foreground: oklch(0.985 0 0);
@@ -130,4 +131,87 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Glowing blue effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.2), 0 0 80px rgba(59, 130, 246, 0.1);
+  }
+
+  .glow-blue-intense {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5),
+      0 0 60px rgba(59, 130, 246, 0.3), 0 0 120px rgba(59, 130, 246, 0.2);
+  }
+
+  .bg-glow-radial {
+    background: radial-gradient(
+      circle at center,
+      rgba(59, 130, 246, 0.1) 0%,
+      transparent 70%
+    );
+  }
+
+  .bg-glow-conic {
+    background: conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(59, 130, 246, 0.2) 0deg,
+      transparent 60deg,
+      rgba(59, 130, 246, 0.2) 120deg,
+      transparent 180deg,
+      rgba(59, 130, 246, 0.2) 240deg,
+      transparent 300deg,
+      rgba(59, 130, 246, 0.2) 360deg
+    );
+  }
+
+  /* Animated glow effect */
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3),
+        0 0 40px rgba(59, 130, 246, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.5),
+        0 0 60px rgba(59, 130, 246, 0.3);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Circuit-like glowing lines */
+  .circuit-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(59, 130, 246, 0.3) 50%,
+      transparent 100%
+    );
+    opacity: 0;
+    animation: circuit-flow 4s ease-in-out infinite;
+  }
+
+  @keyframes circuit-flow {
+    0%,
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
