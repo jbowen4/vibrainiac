@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Brain, Gamepad, Puzzle } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { Gamepad, Puzzle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,15 +21,6 @@ const HeroSection = () => {
               height={120}
               className='w-24 h-24 lg:w-32 lg:h-32'
             />
-          </div>
-
-          <div className='flex justify-center'>
-            <Badge
-              variant='outline'
-              className='text-foreground border-accent/20 bg-accent/10 px-4 py-2 text-sm font-medium max-w-full sm:max-w-fit break-words whitespace-normal'>
-              <Brain className='w-4 h-4 mr-2 text-accent' />
-              Trusted by Gaming Studios & Fortune 500 Companies
-            </Badge>
           </div>
 
           {/* Main Headline */}
