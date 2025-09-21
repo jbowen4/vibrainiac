@@ -97,7 +97,6 @@ const GameDevSection = () => {
 
             <div className='space-y-4 mb-8'>
               <div className='flex items-start space-x-3'>
-                <div className='w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0'></div>
                 <p className='text-muted-foreground'>
                   <strong className='text-foreground'>
                     Concept to Launch:
@@ -107,7 +106,6 @@ const GameDevSection = () => {
                 </p>
               </div>
               <div className='flex items-start space-x-3'>
-                <div className='w-2 h-2 bg-primary-glow rounded-full mt-2 flex-shrink-0'></div>
                 <p className='text-muted-foreground'>
                   <strong className='text-foreground'>
                     Platform Expertise:
@@ -116,7 +114,6 @@ const GameDevSection = () => {
                 </p>
               </div>
               <div className='flex items-start space-x-3'>
-                <div className='w-2 h-2 bg-primary-deep rounded-full mt-2 flex-shrink-0'></div>
                 <p className='text-muted-foreground'>
                   <strong className='text-foreground'>Scalable Teams:</strong>{' '}
                   From solo developers to full studio-scale teams based on your
@@ -127,21 +124,23 @@ const GameDevSection = () => {
 
             {/* Tech Stack */}
             <div className='mb-8'>
-              <h4 className='font-semibold text-foreground mb-4'>
+              <h4 className='font-semibold text-foreground text-xl mb-4'>
                 Technologies We Master
               </h4>
               <div className='flex flex-wrap gap-2'>
                 {technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className='px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium'>
+                    className='px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium glow-white-minimal'>
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <Button variant='default' size='lg' className='group'>
+            <Button
+              size='lg'
+              className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px] glow-blue animate-pulse-glow'>
               Start Your Game Project
               <ArrowRight className='ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform' />
             </Button>
@@ -165,8 +164,8 @@ const GameDevSection = () => {
           {capabilities.map((capability, index) => (
             <Card
               key={index}
-              className='group hover:shadow-glow transition-all duration-300 hover:scale-105 border-border/50 bg-gradient-card'>
-              <CardHeader className='pb-4'>
+              className='group hover:shadow-[0_0_24px_6px_rgba(99,102,241,0.25)] transition-all duration-300 hover:scale-105 border-accent bg-background/60 backdrop-blur-lg shadow-[0_0_16px_4px_rgba(99,102,241,0.15)]'>
+              <CardHeader>
                 <div className='flex items-center space-x-3'>
                   <div className='p-2 bg-primary/10 rounded-lg text-primary group-hover:text-primary-glow transition-colors'>
                     {capability.icon}
@@ -197,7 +196,9 @@ const GameDevSection = () => {
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             <Link href='#contact'>
-              <Button variant='default' size='lg'>
+              <Button
+                size='lg'
+                className='bg-gradient-to-r from-[#6EAEFF] to-[#0269E5] text-white font-extrabold relative shadow-lg shadow-[#6EAEFF]/50 hover:shadow-[#0269E5]/70 transition cursor-pointer'>
                 Contact Us to Get Started
               </Button>
             </Link>

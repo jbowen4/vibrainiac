@@ -5,15 +5,16 @@ import Link from 'next/link';
 
 const HeroSection = () => {
   return (
-    <section className='relative overflow-hidden bg-gradient-to-br from-background via-blue-50/30 to-accent/5'>
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,197,253,0.1),transparent_50%)]' />
+    <section className='relative overflow-hidden'>
+      {/* <section className='relative overflow-hidden bg-gradient-to-br from-background via-blue-50/30 to-accent/5'> */}
+      {/* <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
+      <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,197,253,0.1),transparent_50%)]' /> */}
       {/* Subtle Black Panther theme with purple gradient overlay */}
-      <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.05),transparent_70%)]' />
+      {/* <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(147,51,234,0.05),transparent_70%)]' /> */}
 
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32'>
         <div className='text-center space-y-8'>
-          <div className='flex justify-center mb-8'>
+          {/* <div className='flex justify-center mb-8'>
             <Image
               src='/logo.png'
               alt='VIBRAINIAC Logo'
@@ -21,12 +22,19 @@ const HeroSection = () => {
               height={120}
               className='w-24 h-24 lg:w-32 lg:h-32'
             />
-          </div>
+          </div> */}
 
           {/* Main Headline */}
           <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground text-balance leading-tight'>
             Scale Your Vision With{' '}
-            <span className='text-accent'>Fractional Leadership</span>
+            <span
+              className='bg-gradient-to-r from-[#6EAEFF] to-[#0269E5] bg-clip-text text-transparent font-extrabold relative'
+              // style={{
+              //   textShadow: '0 0 6px #6EAEFF, 0 0 12px #0269E5',
+              // }}
+            >
+              Fractional Leadership
+            </span>
           </h1>
 
           <p className='text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto text-pretty leading-relaxed'>
@@ -59,7 +67,7 @@ const HeroSection = () => {
             <Link href='#contact' className='flex justify-center'>
               <Button
                 size='lg'
-                className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px]'>
+                className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px] glow-blue animate-pulse-glow'>
                 Fractional Leader Request
                 <Puzzle className='h-8 w-8 ml-2' />
               </Button>
@@ -67,7 +75,7 @@ const HeroSection = () => {
             <Link href='#contact' className='flex justify-center'>
               <Button
                 size='lg'
-                className='bg-foreground hover:bg-foreground/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[180px]'>
+                className='bg-foreground hover:bg-foreground/90 text-accent px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[180px] glow-white animate-pulse-glow'>
                 Gamify your idea
                 <Gamepad className='h-8 w-8' />
               </Button>

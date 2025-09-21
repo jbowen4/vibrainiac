@@ -32,8 +32,9 @@ const FractionalLeadershipSection = () => {
     },
     {
       icon: <Users className='h-8 w-8' />,
-      title: 'Fractional COO',
-      description: 'Strategic leadership without the full-time commitment',
+      title: 'Product Mangement',
+      description:
+        'Development leadership to align strategic goals with customer expectations ensuring all product requirements are well executed',
     },
     {
       icon: <Code className='h-8 w-8' />,
@@ -42,8 +43,8 @@ const FractionalLeadershipSection = () => {
     },
     {
       icon: <Gamepad2 className='h-8 w-8' />,
-      title: 'Game Development',
-      description: 'Specialized talent with AAA Game experience',
+      title: 'Game Design Support',
+      description: 'UI/ UX, Prototypes, Narrative Design, Writing/ Editing',
     },
     {
       icon: <Rocket className='h-8 w-8' />,
@@ -87,17 +88,6 @@ const FractionalLeadershipSection = () => {
             </h3>
 
             <div className='space-y-6 mb-8'>
-              <div className='border-l-4 border-accent pl-6'>
-                <h4 className='font-semibold text-foreground mb-2'>
-                  Projects Late or Deadlines Missed
-                </h4>
-                <p className='text-muted-foreground'>
-                  &quot;Our team frequently misses delivery commitments.
-                  We&#39;re losing credibility with leadership and customers
-                  aren&#39;t happy.&quot;
-                </p>
-              </div>
-
               <div className='border-l-4 border-primary-glow pl-6'>
                 <h4 className='font-semibold text-foreground mb-2'>
                   Delivery Too Slow or Costly
@@ -108,14 +98,24 @@ const FractionalLeadershipSection = () => {
                   scale.&quot;
                 </p>
               </div>
-
               <div className='border-l-4 border-primary-deep pl-6'>
                 <h4 className='font-semibold text-foreground mb-2'>
-                  Teams Burning Out
+                  Under Resourced Teams
                 </h4>
                 <p className='text-muted-foreground'>
                   &quot; Every project has lengthy crunch time. Team health is
                   dropping and our best people are looking elsewhere.&quot;
+                </p>
+              </div>
+              <div className='border-l-4 border-primary-deep pl-6'>
+                <h4 className='font-semibold text-foreground mb-2'>
+                  Projects Late or Deadlines Missed Due to Lack of Operations
+                  Process
+                </h4>
+                <p className='text-muted-foreground'>
+                  &quot;Our team frequently misses delivery commitments.
+                  We&#39;re losing credibility with leadership and customers
+                  aren&#39;t happy.&quot;
                 </p>
               </div>
             </div>
@@ -135,14 +135,16 @@ const FractionalLeadershipSection = () => {
           {solutions.map((solution, index) => (
             <Card
               key={index}
-              className='group hover:shadow-glow transition-all duration-300 hover:scale-105 border-accent bg-background/50 backdrop-blur-sm'>
+              className='group hover:shadow-[0_0_24px_6px_rgba(99,102,241,0.25)] transition-all duration-300 hover:scale-105 border-accent bg-background/60 backdrop-blur-lg shadow-[0_0_16px_4px_rgba(99,102,241,0.15)]'>
               <CardHeader>
-                <div className='mb-4 text-primary group-hover:text-primary-glow transition-colors'>
-                  {solution.icon}
+                <div className='flex items-center space-x-3'>
+                  <div className='p-2 bg-primary/10 rounded-lg text-primary group-hover:text-primary-glow transition-colors'>
+                    {solution.icon}
+                  </div>
+                  <CardTitle className='text-lg text-foreground'>
+                    {solution.title}
+                  </CardTitle>
                 </div>
-                <CardTitle className='text-foreground'>
-                  {solution.title}
-                </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className='text-muted-foreground'>

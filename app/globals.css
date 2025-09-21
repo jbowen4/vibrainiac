@@ -138,6 +138,16 @@
       0 0 40px rgba(59, 130, 246, 0.2), 0 0 80px rgba(59, 130, 246, 0.1);
   }
 
+  .glow-white {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(255, 255, 255, 0.1);
+  }
+
+  .glow-white-minimal {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 40px rgba(255, 255, 255, 0.2), 0 0 80px rgba(255, 255, 255, 0.01);
+  }
+
   .glow-blue-intense {
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.5),
       0 0 60px rgba(59, 130, 246, 0.3), 0 0 120px rgba(59, 130, 246, 0.2);

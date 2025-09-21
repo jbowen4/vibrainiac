@@ -25,7 +25,7 @@ const ContactSection = () => {
 
         <div className='grid lg:grid-cols-1 gap-12'>
           {/* Contact Form */}
-          <Card className='shadow-card border-border/50 bg-background/80 backdrop-blur-sm'>
+          <Card className='shadow-card group transition-all duration-300 border-accent bg-background/60 backdrop-blur-lg shadow-[0_0_16px_4px_rgba(99,102,241,0.15)] glow-blue-intense'>
             <CardHeader>
               <CardTitle className='text-2xl text-foreground'>
                 Get Started Today
@@ -128,14 +128,16 @@ const ContactSection = () => {
                 />
               </div>
 
-              <Button variant='default' size='lg' className='w-full'>
+              <Button
+                size='lg'
+                className='w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 font-semibold cursor-pointer flex justify-center items-center glow-blue animate-pulse-glow'>
                 Send Message
               </Button>
             </CardContent>
           </Card>
           <div>
             {/* Trust Indicators */}
-            <Card className='shadow-card border-border/50 bg-background/80 backdrop-blur-sm'>
+            <Card className='shadow-card border-border/50 bg-background/80 backdrop-blur-sm shadow-card group transition-all duration-300 border-accent bg-background/60 backdrop-blur-lg shadow-[0_0_16px_4px_rgba(99,102,241,0.15)] glow-blue-intense'>
               <CardHeader>
                 <CardTitle className='text-xl text-foreground mx-auto'>
                   Trusted by Industry Leaders
@@ -160,7 +162,7 @@ const ContactSection = () => {
                       alt='AT&T'
                       height={50}
                       width={100}
-                      className='h-10 w-auto object-contain'
+                      className='h-10 w-auto object-contain bg-white'
                     />
                     <Image
                       src='/logos/ibm-logo.png'
@@ -176,14 +178,14 @@ const ContactSection = () => {
                       alt='Morgan Stanley'
                       height={50}
                       width={100}
-                      className='h-8 w-auto object-contain'
+                      className='h-8 w-auto object-contain bg-white'
                     />
                     <Image
                       src='/logos/sprint-logo.png'
                       alt='Sprint'
                       height={50}
                       width={100}
-                      className='h-8 w-auto object-contain'
+                      className='h-8 w-auto object-contain bg-white'
                     />
                     <Image
                       src='/logos/us-bank-logo.png'
