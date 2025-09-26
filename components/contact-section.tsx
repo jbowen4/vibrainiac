@@ -148,7 +148,7 @@ const ContactSection = () => {
                   Trusted leaders who have worked with industry leading
                   companies and consulted with Fortune 500 clients
                 </p>
-                <div className='space-y-8'>
+                <div className='space-y-8 w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-8 font-semibold cursor-pointer glow-blue animate-pulse-glow max-w-2xl mx-auto rounded-xl'>
                   <div className='flex justify-center items-center gap-8'>
                     <Image
                       src='/logos/ea-logo.png'
@@ -162,7 +162,7 @@ const ContactSection = () => {
                       alt='AT&T'
                       height={50}
                       width={100}
-                      className='h-10 w-auto object-contain bg-white'
+                      className='h-10 w-auto object-contain'
                     />
                     <Image
                       src='/logos/ibm-logo.png'
@@ -178,14 +178,14 @@ const ContactSection = () => {
                       alt='Morgan Stanley'
                       height={50}
                       width={100}
-                      className='h-8 w-auto object-contain bg-white'
+                      className='h-8 w-auto object-contain'
                     />
                     <Image
                       src='/logos/sprint-logo.png'
                       alt='Sprint'
                       height={50}
                       width={100}
-                      className='h-8 w-auto object-contain bg-white'
+                      className='h-8 w-auto object-contain'
                     />
                     <Image
                       src='/logos/us-bank-logo.png'

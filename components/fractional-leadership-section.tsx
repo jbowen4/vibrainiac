@@ -72,7 +72,7 @@ const FractionalLeadershipSection = () => {
           {/* Image Side */}
           <div className='relative'>
             <Image
-              src={'/team-placeholder.jpg'}
+              src={'/lady-giving-presentation.webp'}
               alt='Professional staffing solutions'
               height={500}
               width={600}
@@ -88,34 +88,40 @@ const FractionalLeadershipSection = () => {
             </h3>
 
             <div className='space-y-6 mb-8'>
-              <div className='border-l-4 border-primary-glow pl-6'>
+              <div className='border-l-4 border-accent pl-6'>
                 <h4 className='font-semibold text-foreground mb-2'>
-                  Delivery Too Slow or Costly
+                  Deliver faster. Scale smarter.
                 </h4>
                 <p className='text-muted-foreground'>
-                  &quot; We deliver on time, but our processes are
-                  over-engineered. We&#39;re not getting enough throughput to
-                  scale.&quot;
+                  Get projects out the door on time without the wasted cost of
+                  over-engineered processes.
                 </p>
               </div>
-              <div className='border-l-4 border-primary-deep pl-6'>
+              <div className='border-l-4 border-accent pl-6'>
                 <h4 className='font-semibold text-foreground mb-2'>
-                  Under Resourced Teams
+                  Boost capacity. Protect your people.
                 </h4>
                 <p className='text-muted-foreground'>
-                  &quot; Every project has lengthy crunch time. Team health is
-                  dropping and our best people are looking elsewhere.&quot;
+                  Add the right support so your team avoids burnout and stays
+                  focused on what they do best.
                 </p>
               </div>
-              <div className='border-l-4 border-primary-deep pl-6'>
+              <div className='border-l-4 border-accent pl-6'>
                 <h4 className='font-semibold text-foreground mb-2'>
-                  Projects Late or Deadlines Missed Due to Lack of Operations
-                  Process
+                  Hit deadlines. Build trust.
                 </h4>
                 <p className='text-muted-foreground'>
-                  &quot;Our team frequently misses delivery commitments.
-                  We&#39;re losing credibility with leadership and customers
-                  aren&#39;t happy.&quot;
+                  Put solid operations in place that keep commitments,
+                  strengthen credibility, and keep customers happy.
+                </p>
+              </div>
+              <div className='border-l-4 border-accent pl-6'>
+                <h4 className='font-semibold text-foreground mb-2'>
+                  Expand globally. Save locally.
+                </h4>
+                <p className='text-muted-foreground'>
+                  Tap into skilled offshore talent to increase bandwidth and cut
+                  costs without sacrificing quality.
                 </p>
               </div>
             </div>
