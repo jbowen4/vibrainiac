@@ -58,7 +58,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href='/#contact'>
+                <Link href='/contact'>
                   <p className='hover:text-accent transition-colors'>Contact</p>
                 </Link>
               </li>

@@ -29,27 +29,13 @@ export function Header() {
           </div>
 
           {/* Navigation */}
-          {/* <nav className='hidden md:flex items-center space-x-8'> */}
           <div className='hidden md:flex md:justify-center md:flex-1'>
             <Navbar />
           </div>
-          {/* </nav> */}
-
-          {/* Get Started Button */}
-          {/* <div className='flex items-center space-x-4'>
-            <Link href='#contact' passHref>
-              <Button className='bg-accent hover:bg-accent/90 text-accent-foreground'>
-                Get Started
-              </Button>
-            </Link>
-            <Button variant='ghost' size='sm' className='md:hidden'>
-              <Menu className='h-5 w-5' />
-            </Button>
-          </div> */}
 
           {/* Get Started Button */}
           <div className='flex items-center gap-4'>
-            <Link href='#contact' passHref>
+            <Link href='/contact' passHref>
               <Button className='bg-accent hidden md:inline-flex hover:bg-accent/90 text-accent-foreground'>
                 Get Started
               </Button>
@@ -66,7 +52,7 @@ export function Header() {
               <SheetContent className='p-3' side='right'>
                 <div className='flex flex-col gap-4 py-6'>
                   <Navbar orientation='vertical' />
-                  <Link href='#contact' passHref>
+                  <Link href='/contact' passHref>
                     <Button className='bg-accent hover:bg-accent/90 text-accent-foreground'>
                       Get Started
                     </Button>

@@ -78,7 +78,7 @@ const GameDevSection = () => {
             </span>
           </h2> */}
           <h2 className='text-3xl lg:text-4xl font-bold text-foreground mb-4'>
-            Game Development Teams
+            Game & App Development Team
           </h2>
           <p className='text-xl text-muted-foreground max-w-3xl mx-auto'>
             Turn your game idea into reality with our specialized development
@@ -138,12 +138,14 @@ const GameDevSection = () => {
               </div>
             </div>
 
-            <Button
-              size='lg'
-              className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px] glow-blue animate-pulse-glow'>
-              Start Your Game Project
-              <ArrowRight className='ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform' />
-            </Button>
+            <Link href={'/contact'}>
+              <Button
+                size='lg'
+                className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px] glow-blue animate-pulse-glow'>
+                Start Your Game Project
+                <ArrowRight className='ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform' />
+              </Button>
+            </Link>
           </div>
 
           {/* Image Side */}
@@ -195,10 +197,10 @@ const GameDevSection = () => {
             talent to make it happen.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link href='#contact'>
+            <Link href='/contact'>
               <Button
                 size='lg'
-                className='bg-gradient-to-r from-[#6EAEFF] to-[#0269E5] text-white font-extrabold relative shadow-lg shadow-[#6EAEFF]/50 hover:shadow-[#0269E5]/70 transition cursor-pointer'>
+                className='bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-6 font-semibold cursor-pointer flex justify-between items-center w-auto min-w-[240px] glow-blue animate-pulse-glow'>
                 Contact Us to Get Started
               </Button>
             </Link>

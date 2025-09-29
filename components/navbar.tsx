@@ -12,9 +12,10 @@ export function Navbar({ orientation = 'horizontal' }: NavbarProps) {
   const pathname = usePathname();
 
   const navItems = [
+    { name: 'Home', href: '/' },
     { name: 'Solutions', href: '/#solutions' },
-    { name: 'About', href: '/#about' },
-    { name: 'Contact', href: '/#contact' },
+    // { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
