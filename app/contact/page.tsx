@@ -9,6 +9,28 @@ import { useState } from 'react';
 const ContactSection = () => {
   const [projectType, setProjectType] = useState('');
 
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    // Convert FormData entries into a [string, string][] tuple array
+    const entries = Array.from(formData.entries()).map(([key, value]) => [
+      key,
+      String(value),
+    ]);
+
+    await fetch('/__forms.html', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(entries).toString(),
+    });
+
+    window.location.href = '/success';
+  };
+
   return (
     <section
       id='contact'
@@ -37,9 +59,10 @@ const ContactSection = () => {
             <CardContent className='space-y-6'>
               <form
                 name='contact'
-                action='/success'
-                method='POST'
-                data-netlify='true'>
+                onSubmit={handleSubmit}
+                className='space-y-6'>
+                {/* Required hidden field for Netlify */}{' '}
+                <input type='hidden' name='form-name' value='contact' />
                 <div className='grid md:grid-cols-2 gap-4'>
                   <div>
                     <label
@@ -47,7 +70,13 @@ const ContactSection = () => {
                       className='block text-sm font-medium text-foreground my-2'>
                       First Name
                     </label>
-                    <Input id='firstName' placeholder='John' />
+                    <Input
+                      id='firstName'
+                      placeholder='John'
+                      name='firstName'
+                      type='text'
+                      required
+                    />
                   </div>
                   <div>
                     <label
@@ -55,10 +84,15 @@ const ContactSection = () => {
                       className='block text-sm font-medium text-foreground my-2'>
                       Last Name
                     </label>
-                    <Input id='lastName' placeholder='Doe' />
+                    <Input
+                      id='lastName'
+                      placeholder='Doe'
+                      name='lastName'
+                      type='text'
+                      required
+                    />
                   </div>
                 </div>
-
                 <div>
                   <label
                     htmlFor='email'
@@ -69,18 +103,23 @@ const ContactSection = () => {
                     id='email'
                     type='email'
                     placeholder='john@company.com'
+                    name='email'
+                    required
                   />
                 </div>
-
                 <div>
                   <label
                     htmlFor='company'
                     className='block text-sm font-medium text-foreground my-2'>
                     Company
                   </label>
-                  <Input id='company' placeholder='Your Company' />
+                  <Input
+                    id='company'
+                    placeholder='Your Company'
+                    name='company'
+                    type='text'
+                  />
                 </div>
-
                 <div>
                   <label
                     htmlFor='project'
@@ -89,6 +128,8 @@ const ContactSection = () => {
                   </label>
                   <select
                     id='project'
+                    name='project'
+                    required
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value)}
                     className='w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring'>
@@ -110,6 +151,7 @@ const ContactSection = () => {
                       </label>
                       <select
                         id='services'
+                        name='services'
                         className='w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring'>
                         <option value=''>Select service</option>
                         <option value='project-management'>
@@ -129,7 +171,6 @@ const ContactSection = () => {
                     </div>
                   )}
                 </div>
-
                 <div>
                   <label
                     htmlFor='message'
@@ -138,13 +179,14 @@ const ContactSection = () => {
                   </label>
                   <Textarea
                     id='message'
+                    name='message'
                     placeholder='Tell us about your project, timeline, and staffing needs...'
                     rows={4}
                   />
                 </div>
-
                 <Button
                   size='lg'
+                  type='submit'
                   className='w-full bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 mt-8 font-semibold cursor-pointer flex justify-center items-center glow-blue animate-pulse-glow'>
                   Send Message
                 </Button>
