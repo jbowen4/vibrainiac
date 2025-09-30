@@ -196,7 +196,7 @@ const GameDevSection = () => {
             established company expanding into gaming, we have the specialized
             talent to make it happen.
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+          <div className='flex items-center justify-center'>
             <Link href='/contact'>
               <Button
                 size='lg'

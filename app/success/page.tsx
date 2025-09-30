@@ -16,7 +16,7 @@ export default function SuccessPage() {
 
         <p className='text-lg text-muted-foreground max-w-2xl mx-auto text-left'>
           Thank you for submitting. Our team will be reaching out to you soon.
-          We look forward to working with you hopefully.
+          We look forward to working with you.
         </p>
 
         <Button

@@ -21,7 +21,7 @@ const ContactSection = () => {
                   Trusted leaders who have worked with industry leading
                   companies and consulted with Fortune 500 clients
                 </p>
-                <div className='space-y-8 w-full bg-[#6EAEFF] text-accent-foreground px-6 py-8 font-semibold glow-blue animate-pulse-glow max-w-2xl mx-auto rounded-xl'>
+                <div className='space-y-8 w-full bg-[#6EAEFF] text-accent-foreground px-6 py-8 font-semibold glow-blue animate-pulse-glow max-w-2xl mx-auto rounded-xl sm:px-8'>
                   <div className='flex justify-center items-center gap-8'>
                     <Image
                       src='/logos/ea-logo.png'
@@ -68,11 +68,11 @@ const ContactSection = () => {
                       className='h-8 w-auto object-contain'
                     />
                     <Image
-                      src='/logos/american-airlines-logo.png'
+                      src='/logos/american-airlines-logo.webp'
                       alt='American Airlines'
                       height={50}
                       width={100}
-                      className='h-8 w-auto object-contain'
+                      className='h-10 w-auto object-contain'
                     />
                   </div>
                 </div>
