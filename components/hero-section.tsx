@@ -24,7 +24,7 @@ const HeroSection = () => {
       title: 'Solutions',
       description:
         'Our solutions team designs and builds custom applications that simplify operations, spark engagement, and scale with your business.',
-      href: '#solutions',
+      href: '#game-dev',
     },
     {
       icon: Gamepad2,
@@ -60,7 +60,7 @@ const HeroSection = () => {
 
           <p className='text-xl text-center md:text-left lg:text-2xl text-muted-foreground max-w-4xl text-pretty leading-relaxed'>
             Fractional leaders, app solutions, and creative game development
-            &mdash; built from the future.
+            &mdash; built for the future.
           </p>
 
           {/* Stats */}
@@ -101,20 +101,6 @@ const HeroSection = () => {
                 <Gamepad className='h-8 w-8' />
               </Button>
             </Link> */}
-          </div>
-
-          {/* Trust Indicators */}
-          <div className='pt-12 flex flex-wrap items-center gap-8 text-muted-foreground justify-center md:justify-start'>
-            <div className='flex items-center gap-2'>
-              <div className='w-2 h-2 bg-accent rounded-full' />
-              <span className='text-sm font-medium'>
-                20+ Years IT Leadership
-              </span>
-            </div>
-            <div className='flex items-center gap-2'>
-              <div className='w-2 h-2 bg-accent rounded-full' />
-              <span className='text-sm font-medium'>AAA Game Experience</span>
-            </div>
           </div>
         </div>
 

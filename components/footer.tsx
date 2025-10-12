@@ -46,9 +46,23 @@ export function Footer() {
             <h3 className='font-semibold text-foreground mb-4'>Site Map</h3>
             <ul className='space-y-2 text-sm text-muted-foreground'>
               <li>
-                <Link href='/#solutions'>
+                <Link href='/#services'>
+                  <p className='hover:text-accent transition-colors'>
+                    Services
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link href='/#game-dev'>
                   <p className='hover:text-accent transition-colors'>
                     Solutions
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link href='/#game-dev'>
+                  <p className='hover:text-accent transition-colors'>
+                    Game Dev
                   </p>
                 </Link>
               </li>
