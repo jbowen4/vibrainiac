@@ -41,16 +41,15 @@ const HeroSection = () => {
         <div className='text-left space-y-8'>
           {/* Main Headline */}
           <h1 className='text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground text-balance leading-tight text-center md:text-left'>
-            Scale Your Vision With{' '}
-            <span className='bg-gradient-to-r from-[#6EAEFF] to-[#0269E5] bg-clip-text text-transparent font-extrabold relative'>
+            Elevating Business Through Games, Tech, and Leadership
+            {/* <span className='bg-gradient-to-r from-[#6EAEFF] to-[#0269E5] bg-clip-text text-transparent font-extrabold relative'>
               Fractional Leadership
-            </span>
+            </span> */}
           </h1>
 
           <p className='text-xl text-center md:text-left lg:text-2xl text-muted-foreground max-w-4xl text-pretty leading-relaxed'>
-            Expert leaders at a fraction of the cost that adapt to your unique
-            challenges with precision-matched talent that accelerate your
-            project delivery and operational excellence.
+            Fractional leaders, app solutions, and creative game development--
+            built from the future.
           </p>
 
           {/* Stats */}
