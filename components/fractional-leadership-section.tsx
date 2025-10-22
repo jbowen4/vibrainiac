@@ -33,7 +33,7 @@ const FractionalLeadershipSection = () => {
     },
     {
       icon: <Users className='h-8 w-8' />,
-      title: 'Product Mangement',
+      title: 'Product Management',
       description:
         'Development leadership to align strategic goals with customer expectations ensuring all product requirements are well executed',
     },
