@@ -16,7 +16,7 @@ export function Navbar({ orientation = 'horizontal' }: NavbarProps) {
     { name: 'Services', href: '/#services' },
     { name: 'Solutions', href: '/#game-dev' },
     { name: 'Game', href: '/#game-dev' },
-    // { name: 'About', href: '/about' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
